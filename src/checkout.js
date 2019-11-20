@@ -3,7 +3,7 @@ class Checkout {
     this._total = 0
     this._priceList = {
       "FR1": 3.11,
-      "SR1": 5.00,
+      "SR1": 5.23,
       "CF1": 11.23
     }
     this._basket = {}
