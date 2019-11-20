@@ -1,19 +1,22 @@
 pipeline {
-    agent any 
+    agent any
     stages {
-        stage('Build') { 
-            steps {
-                sh ' echo "building application"'
+        stage('Buil') {
+            steps {  sonar-scanner \
+                    -Dsonar.projectKey=supermarket_js \
+                    -Dsonar.sources=. \
+                    -Dsonar.host.url=http://13.52.180.37:9000 \
+                    -Dsonar.login=46dec775c1773312bf9bb5bb641f5796de6800b3
             }
         }
-        stage('Test') { 
+        stage('Test') {
             steps {
-                 sh ' echo "testing"' 
+                 sh ' echo "testing"'
             }
         }
-        stage('Deploy') { 
+        stage('Deploy') {
             steps {
-                sh 'echo "Deploying"' 
+                sh 'echo "Deploying"'
             }
         }
     }
