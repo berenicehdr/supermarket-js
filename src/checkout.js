@@ -2,9 +2,9 @@ class Checkout {
   constructor () {
     this._total = 0
     this._priceList = {
-      "FR1": 3.99,
-      "SR1": 5.15,
-      "CF1": 9.23
+      "FR1": 3.00,
+      "SR1": 5.05,
+      "CF1": 9.00
     }
     this._basket = {}
   }
